@@ -1,0 +1,17 @@
+language: elixir
+elixir:
+- 1.2
+otp_release:
+- 18.2
+sudo: false
+addons:
+  postgresql: '9.4'
+before_script:
+- psql -c 'create database peepy-test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: GCmfu2BgjLACPjih2aMxOxQIPkYp+wzQ2xsy5XtglWNcJrXar6dznA36+w6UOzyyh1FHjLLbfxsbGyhUAAVkqkLNwjVsTQNfVJWdnvy7s8FPTXXSve4aVUlwEijoqP615dSXxLRX5Jf/08Up5JE7wWh1QcsoU6DwQCHe+vCmhvOwxXfPmxRaDtynIUwDZpXTdXwjZxd8FUtgzmrQzOrg29RFjKy9LxrIVC81TY6Iow+wbieD4QZBkVYDVmSECOhYb/CvD/ZKWsLb+tXQPotp7PX/zzX4NabR/TcMIGn725DbI2C0WjLTPTcVKkVY23nLP7jN3q11GDw0p2LZeZyWDHba4tL1B/YOSPch+8KA3JxNaS0h8kTeVSejck2dKro3ezPzTC+7gqOiyjebuOhppTxW9B+EPT8xWRDxuiEAnsy4iLHhy6CgmhiVF+PUN0W6nywvhJ7VnfrNE3jrQ3gyr4+um7PTZDsbdUU6F3CJIh4wiSZEVTXGYwHWm2Rv5QY3I2/ZMF6hiqSHQV61k+7uIGoxaSx6jsCy5btWu5K8UWoqNMSvex+t/kfEXwx3Z7jg1YeCEJiA0/mUya2cZY2Rmp+HINs8vQPmhdh27WKyDtsv6k69DAG54xc8+t1C3KECRBROAl2h2UxKKY7kk20BNdONJ28Uww6sTwXsk+VAQwo=
+  app: peepy-serve
+  on:
+    repo: hileef/peepy-serve
