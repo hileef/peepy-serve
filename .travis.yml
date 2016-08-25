@@ -7,7 +7,7 @@ sudo: false
 addons:
   postgresql: '9.4'
 before_script:
-- psql -c 'create database peepy-test;' -U postgres
+- psql -c 'create database peepy;' -U postgres
 deploy:
   provider: heroku
   api_key:
