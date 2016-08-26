@@ -4,7 +4,7 @@ defmodule Peepy.UserController do
 
   alias Peepy.User
 
-  plug Guardian.Plus.EnsureAuthenticated, handler: Peepy.AuthErrorHandler
+  plug Guardian.Plug.EnsureAuthenticated, handler: Peepy.AuthErrorHandler
 
   def current(conn, _) do
 

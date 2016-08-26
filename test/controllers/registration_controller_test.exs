@@ -7,7 +7,7 @@ defmodule Peepy.RegistrationControllerTest do
   @valid_attrs %{
     email: "mike@example.com",
     password: "mikeyDahBest",
-    password_confirmation: "mikeyDahBest"
+    "password-confirmation": "mikeyDahBest"
   }
 
   @invalid_attrs %{
@@ -20,7 +20,7 @@ defmodule Peepy.RegistrationControllerTest do
 
   test "creates and renders resource when data is valid", %{conn: conn} do
     conn = post conn, registration_path(conn, :create), %{data:
-      %{type: "user", attributes: @valid_attrs }
+      %{type: "users", attributes: @valid_attrs }
     }
 
     assert json_response(conn, 201)["data"]["id"]

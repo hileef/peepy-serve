@@ -31,4 +31,5 @@ defmodule Peepy.RegistrationController do
 
 
   end
+
 end
