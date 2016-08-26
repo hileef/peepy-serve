@@ -8,9 +8,8 @@ defmodule Peepy.Router do
   scope "/api", Peepy do
     pipe_through :api
 
-    post "register", RegistrationController, :create
-    resources "session", SessionController, only: [:index]
-
+    post "/register", RegistrationController, :create
+    post "/token", SessionController, :create, as: :login
 
   end
 end

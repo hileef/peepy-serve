@@ -38,7 +38,8 @@ defmodule Peepy.Mixfile do
      {:cowboy, "~> 1.0"},
      {:cors_plug, "~> 1.1"},
      {:guardian, "~> 0.10.0"},
-     {:comeonin, "~> 2.4"}]
+     {:comeonin, "~> 2.4"},
+     {:ja_serializer, "~> 0.10.1"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
