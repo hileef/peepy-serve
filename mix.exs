@@ -31,6 +31,7 @@ defmodule Peepy.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [{:phoenix, "~> 1.2.1"},
+     {:poison, "~> 2.0", [hex: :poison, optional: false, manager: :mix, override: true]},
      {:phoenix_pubsub, "~> 1.0"},
      {:phoenix_ecto, "~> 3.0"},
      {:postgrex, ">= 0.0.0"},
