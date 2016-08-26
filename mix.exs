@@ -19,7 +19,7 @@ defmodule Peepy.Mixfile do
   def application do
     [mod: {Peepy, []},
      applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :comeonin]]
   end
 
   # Specifies which paths to compile per environment.
@@ -37,7 +37,8 @@ defmodule Peepy.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:cors_plug, "~> 1.1"},
-     {:guardian, "~> 0.10.0"}]
+     {:guardian, "~> 0.10.0"},
+     {:comeonin, "~> 2.4"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

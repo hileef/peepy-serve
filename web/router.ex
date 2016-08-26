@@ -8,7 +8,7 @@ defmodule Peepy.Router do
   scope "/api", Peepy do
     pipe_through :api
 
-    # Route to session controller
+    post "register", RegistrationController, :create
     resources "session", SessionController, only: [:index]
 
 
