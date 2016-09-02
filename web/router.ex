@@ -24,7 +24,11 @@ defmodule Peepy.Router do
   scope "/api", Peepy do
     pipe_through :api_auth
 
-    get "/user/current", UserController, :current
+    resources "users", UserController, only: [:index, :show] do
+      get "rooms", RoomController, :index, as: :rooms
+    end
+    
+    resources "rooms", RoomController, except: [:new, :edit]
 
   end
 

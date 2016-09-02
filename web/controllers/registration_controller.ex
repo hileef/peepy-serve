@@ -20,7 +20,7 @@ defmodule Peepy.RegistrationController do
       {:ok, user} ->
         conn
         |> put_status(:created)
-        |> render(Peepy.UserView, "show.json", user: user)
+        |> render(Peepy.UserView, "show.json-api", data: user)
 
       {:error, changeset} ->
         conn
